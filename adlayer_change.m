@@ -3,7 +3,7 @@ function [output]=adlayer_change(controls,graphs)
 %   Simulates the QCM-D response to changes in the viscoelastic properties 
 %   of a thin film and the solution surrounding it. When run it will print
 %   a text summary to the main console about what is being modelled.
-%   © 2015 T.P. McNamara and C.F. Blanford
+%   Â© 2015 T.P. McNamara and C.F. Blanford
 % 
 % -------------------------------------------------------------------------
 %   >>Inputs<<
@@ -201,7 +201,7 @@ output.lay_visc(:,1) = controls.viscosity(1);
 shea_con = 'shear, ';
 shea_vai = '';
 else
-output.lay_visc(:,1) = controls.visc(1)+(controls.visc(2)-controls.visc(1))*(exp(-output.time(:,1)/controls.visc(3)));
+output.lay_shear(:,1) = controls.shear(1)+(controls.shear(2)-controls.shear(1))*(exp(-output.time(:,1)/controls.shear(3)));
 shea_con = '';
 shea_vai = 'shear, ';
 end

@@ -102,7 +102,8 @@ elseif publication == 0
     title(title_text,'FontSize',14);
     % Create colorbar
     box on
-    colorbar('peer',axes1,[0.85 0.11 0.02 0.815],'FontSize',12);
+%     colorbar('peer',axes1);
+    colorbar('peer',axes1,'Position',[0.85 0.11 0.02 0.815],'FontSize',12);
     hold off
     if or((z_start ~= 0),(z_fin ~= 0))
         zlim(axes1,[z_start,z_fin])
@@ -112,6 +113,15 @@ else
     error('publication setting must be either 1 or 0')
 end
 figure_count = figure_number+1;
+
+% ----------------------------------------------------------
+
+% % Create title
+% title('Sauerbrey deviation for harmonic 13','FontSize',14);
+% 
+% % Create colorbar
+% colorbar('peer',axes1,'Position',...
+%     [0.89769009272816 0.11 0.0195217179111762 0.815]);
 
 
 
